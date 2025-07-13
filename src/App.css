@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: 'Pangolin', cursive;
+}
+
+/* di index.css atau App.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

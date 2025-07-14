@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import DestinationDetailModal from "./DestinationDetailModal";
 import DestinationCard from "./DestinationCard";
 import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom";
 const API_URL = `${process.env.REACT_APP_API_URL}/destinasi`;
 
 const Destination = () => {
@@ -38,9 +40,21 @@ const Destination = () => {
       );
     }
   };
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isDestination = location.pathname === "/";
 
   return (
     <div className="px-6 md:px-16 py-10 bg-gradient-to-b from-white via-cyan-50 to-blue-100 min-h-screen">
+      {!isDestination && (
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-2 text-blue-700 hover:text-blue-900 transition mb-8 self-start"
+        >
+          <FaArrowLeft className="text-sm" />
+          <span className="text-sm font-medium">Kembali</span>
+        </button>
+      )}
       <div className="text-center mb-8">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
           Destinasi Wisata Madiun

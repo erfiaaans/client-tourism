@@ -4,7 +4,7 @@ const Footer = () => {
     return (
 
         <footer className="bg-gradient-to-t from-blue-700 via-blue-600 to-cyan-500 text-white px-6 py-12">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
+            {/* <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8">
 
                 <div className="md:col-span-2 text-left">
                     <h1 className="text-3xl font-bold mb-3">Travel.</h1>
@@ -42,10 +42,11 @@ const Footer = () => {
                         <a href="#" className="hover:text-sky-400 transition"><FaTwitterSquare /></a>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="text-center text-sm text-gray-400 mt-10 border-t border-gray-600 pt-4">
-                &copy; {new Date().getFullYear()} Travel Madiun. All rights reserved.
+            <div >
+            {/* className="text-center text-sm text-gray-400 mt-10 border-t border-gray-600 pt-4"> */}
+                &copy; {new Date().getFullYear()} Erfia Nadia Safari - 2205101081.
             </div>
         </footer>
     );

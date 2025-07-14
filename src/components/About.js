@@ -1,9 +1,23 @@
 
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 const AboutUs = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const isAbout = location.pathname === "/";
     return (
-        <div className="min-h-screen bg-gradient-to-t from-blue-100 via-cyan-50 to-white px-6 py-16 flex flex-col items-center">
+        <div className=" bg-gradient-to-t from-blue-100 via-cyan-50 to-white px-6 py-16 flex flex-col items-center">
+            {!isAbout && (
+                <button
+                    onClick={() => navigate(-1)}
+                    className="flex items-center gap-2 text-blue-700 hover:text-blue-900 transition mb-8 self-start"
+                >
+                    <FaArrowLeft className="text-sm" />
+                    <span className="text-sm font-medium">Kembali</span>
+                </button>
+            )}
             <div className="max-w-3xl text-center">
                 <h1 className="text-4xl md:text-5xl font-bold text-blue-800 mb-6">
                     About Us

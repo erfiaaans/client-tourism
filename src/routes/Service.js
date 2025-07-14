@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useNavigate, useLocation } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
 const Service = () => {
   const scrollRef = useRef(null);
@@ -80,9 +82,21 @@ const Service = () => {
     }
   };
 
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isService = location.pathname === "/";
   return (
     <>
       <div className="bg-gradient-to-t from-blue-100 via-cyan-50 to-white px-6 py-8">
+        {!isService && (
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 text-blue-700 hover:text-blue-900 transition mb-8 self-start"
+          >
+            <FaArrowLeft className="text-sm" />
+            <span className="text-sm font-medium">Kembali</span>
+          </button>
+        )}
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
           <div className="md:col-span-1">
             <h1 className="text-4xl font-bold text-blue-800 mb-4">Layanan Wisata</h1>

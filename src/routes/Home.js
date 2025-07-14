@@ -2,7 +2,6 @@ import Destination from "../components/Destination";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Trip from "../components/Trip";
 import Service from "./Service";
 import heroesBg from "../assets/img/heroes.jpeg";
 import ContactUs from "../components/ContactUs";
@@ -26,10 +25,9 @@ function Home() {
       />
 
       <Destination />
+      <Service />
       <AboutUs />
       <ContactUs />
-      <Service />
-      <Trip />
       <Footer />
     </>
   );

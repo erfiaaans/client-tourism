@@ -16,6 +16,7 @@ const Navbar = () => {
           <Link to="/" className="text-white no-underline hover:underline transition">Home</Link>
           <Link to="/about" className="text-white no-underline hover:underline transition">About</Link>
           <Link to="/destination" className="text-white no-underline hover:underline transition">Destination</Link>
+          <Link to="/service" className="text-white no-underline hover:underline transition">Service</Link>
           <Link to="/contact" className="text-white no-underline hover:underline transition">Contact</Link>
         </div>
       </div>
@@ -40,7 +41,7 @@ const Navbar = () => {
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
                 onClick={() => navigate("/admin")}
               >
-                Admin
+                Tambah Destinasi
               </li>
               <li
                 className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
